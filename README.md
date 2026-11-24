@@ -13,11 +13,10 @@ Implementation and experimental results of a **Denoising Diffusion Probabilistic
 
 ```text
 .
-├── HW03.ipynb                                      # Main DDPM training & evaluation notebook (MPS accelerated)
-├── Homework_3.pdf                                  # Assignment specification
-├── neurips_2025.sty                                # NeurIPS LaTeX style file for report writing
-├── 2021-08-11-GAN-evaluation-using-FID-and-IS.ipynb# Reference PyTorch-Ignite FID/IS evaluation notebook
-├── outputs/                                        # Saved metrics, loss curves, and generated image grids
+├── HW03.ipynb                                       # Main DDPM training & evaluation notebook (MPS accelerated)
+├── Homework_3.pdf                                   # Assignment specification
+├── 2021-08-11-GAN-evaluation-using-FID-and-IS.ipynb # Reference PyTorch-Ignite FID/IS evaluation notebook
+├── outputs/                                         # Saved metrics, loss curves, and generated image grids
 │   ├── hyperparameters.json
 │   ├── metrics_summary.json
 │   ├── training_loss_curve.png
@@ -78,9 +77,9 @@ Evaluated on `1,024` real/generated image pairs using **1,000-step DDPM sampling
 
 ## How to Run
 
-1. Prepare the dataset under `./data/Histopathology/` (`5,179` `.png` files).
-2. Activate the Python environment with PyTorch (`mps` / `cuda` / `cpu`), `torchvision`, `pytorch-ignite`, `matplotlib`, `tqdm`, and `pillow`:
+1. **Prepare the Dataset**: Download the Histopathology image collection and place the `.png` files under `./data/Histopathology/`.
+2. **Install Dependencies**: Ensure you have Python 3.10+ with PyTorch (`mps`, `cuda`, or `cpu` support) and the required packages installed:
    ```bash
-   conda activate ml
+   pip install torch torchvision pytorch-ignite matplotlib numpy pillow tqdm scipy
    ```
-3. Open and run `HW03.ipynb` sequentially. All plots, metrics, and checkpoints will be saved to `outputs/` and `checkpoints/`.
+3. **Run the Notebook**: Open `HW03.ipynb` in Jupyter and execute the cells sequentially. The notebook automatically detects available hardware acceleration (`mps` on Apple Silicon, `cuda` on NVIDIA GPUs, or `cpu`) and saves all plots, evaluation metrics, and checkpoints to `outputs/` and `checkpoints/`.
