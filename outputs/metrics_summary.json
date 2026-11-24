@@ -1,0 +1,9 @@
+{
+  "num_eval_samples": 1024,
+  "sampler": "DDPM (1000 steps)",
+  "fid_score": 0.0422256737947464,
+  "inception_score": 1.8379637002944946,
+  "final_epoch_loss": 0.029054908582475038,
+  "best_epoch_loss": 0.027322676044423132,
+  "num_parameters": 26623363
+}

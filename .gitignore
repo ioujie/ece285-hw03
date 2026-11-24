@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Dataset & Large Model Checkpoints (excluded due to GitHub file size limits)
+data/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
