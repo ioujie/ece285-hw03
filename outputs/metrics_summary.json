@@ -1,9 +1,11 @@
 {
-  "num_eval_samples": 1024,
+  "num_eval_samples": 2048,
   "sampler": "DDPM (1000 steps)",
-  "fid_score": 0.0422256737947464,
-  "inception_score": 1.8379637002944946,
-  "final_epoch_loss": 0.029054908582475038,
-  "best_epoch_loss": 0.027322676044423132,
-  "num_parameters": 26623363
+  "fid_score": 0.007793612630756286,
+  "inception_score": 2.8267022260177304,
+  "final_epoch_loss": 0.02294096305549885,
+  "best_epoch_loss": 0.022235987447664973,
+  "final_epoch_raw_mse": 0.05932342318922096,
+  "best_epoch_raw_mse": 0.055684238996194756,
+  "num_parameters": 27659587
 }
