@@ -14,5 +14,13 @@ checkpoints/
 *.pth
 *.ckpt
 
-# LaTeX style files
+# LaTeX style, source, build & PDF files
 *.sty
+*.tex
+*.pdf
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls

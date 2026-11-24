@@ -1,6 +1,6 @@
 # ECE 285 Homework 3: DDPM for Histopathology Image Generation
 
-Implementation and experimental results of a **Denoising Diffusion Probabilistic Model (DDPM)** trained from scratch on the **Histopathology** dataset (`5,179` images) using **Apple Silicon MPS (`mps`)** hardware acceleration.
+Implementation and experimental results of a **Denoising Diffusion Probabilistic Model (DDPM)** trained from scratch on the **Histopathology** dataset (`5,179` images).
 
 ## Overview
 
@@ -13,8 +13,7 @@ Implementation and experimental results of a **Denoising Diffusion Probabilistic
 
 ```text
 .
-├── HW03.ipynb                                       # Main DDPM training & evaluation notebook (MPS accelerated)
-├── Homework_3.pdf                                   # Assignment specification
+├── HW03.ipynb                                       # Main DDPM training & evaluation notebook
 ├── 2021-08-11-GAN-evaluation-using-FID-and-IS.ipynb # Reference PyTorch-Ignite FID/IS evaluation notebook
 ├── outputs/                                         # Saved metrics, loss curves, and generated image grids
 │   ├── hyperparameters.json
@@ -48,7 +47,6 @@ Implementation and experimental results of a **Denoising Diffusion Probabilistic
 | | LR Scheduler | `CosineAnnealingLR` ($\eta_{\min} = 10^{-6}$) |
 | | Batch Size / Epochs | `64` / `80` |
 | | Gradient Clipping / EMA | `1.0` / `0.9999` |
-| | Accelerator | Apple Silicon `mps` |
 
 ## Quantitative Results
 
@@ -78,8 +76,8 @@ Evaluated on `1,024` real/generated image pairs using **1,000-step DDPM sampling
 ## How to Run
 
 1. **Prepare the Dataset**: Download the Histopathology image collection and place the `.png` files under `./data/Histopathology/`.
-2. **Install Dependencies**: Ensure you have Python 3.10+ with PyTorch (`mps`, `cuda`, or `cpu` support) and the required packages installed:
+2. **Install Dependencies**: Ensure you have Python 3.10+ with PyTorch and the required packages installed:
    ```bash
    pip install torch torchvision pytorch-ignite matplotlib numpy pillow tqdm scipy
    ```
-3. **Run the Notebook**: Open `HW03.ipynb` in Jupyter and execute the cells sequentially. The notebook automatically detects available hardware acceleration (`mps` on Apple Silicon, `cuda` on NVIDIA GPUs, or `cpu`) and saves all plots, evaluation metrics, and checkpoints to `outputs/` and `checkpoints/`.
+3. **Run the Notebook**: Open `HW03.ipynb` in Jupyter and execute the cells sequentially. The notebook automatically detects the available compute device and saves all plots, evaluation metrics, and checkpoints to `outputs/` and `checkpoints/`.
