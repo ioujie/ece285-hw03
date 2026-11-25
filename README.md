@@ -1,6 +1,6 @@
 # ECE 285 Homework 3: DDPM for Histopathology Image Generation
 
-Implementation and experimental results of an improved **Denoising Diffusion Probabilistic Model (DDPM)** trained from scratch on the **Histopathology** dataset (`5,179` images).
+Implementation and experimental results of a **Denoising Diffusion Probabilistic Model (DDPM)** trained from scratch on the **Histopathology** dataset (`5,179` images).
 
 ## Overview
 
